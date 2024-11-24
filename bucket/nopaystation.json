@@ -1,0 +1,23 @@
+{
+    "version": "0.94",
+    "description": "Sony PlayStation game browser.",
+    "homepage": "https://nopaystation.com/",
+    "license": "Freeware",
+    "notes": "Download and link library files from https://nopaystation.com/faq",
+    "url": "https://nopaystation.com/vita/npsReleases/NPS_Browser_0.94.exe",
+    "hash": "0f20b22dee3d5f2942f3a8b3395786c8f42ffc705f8abd2e2d551154d11df678",
+    "shortcuts": [
+        [
+            "NPS_Browser_0.94.exe",
+            "NoPayStation"
+        ]
+    ],
+    "pre_install": "if (!(Test-Path \"$persist_dir\\npsSettings.dat\")) { New-Item \"$dir\\npsSettings.dat\" | Out-Null }",
+    "persist": "npsSettings.dat",
+    "checkver": {
+        "regex": "\\<a href=\"https://nopaystation.com/vita/npsReleases/NPS_Browser_([\\d.]+).exe\""
+    },
+    "autoupdate": {
+        "url": "https://nopaystation.com/vita/npsReleases/NPS_Browser_$version.exe"
+    }
+}
