@@ -1,0 +1,35 @@
+{
+    "version": "1.2.45.454.gc16ec9f6",
+    "description": "A digital music service that gives you access to millions of songs.",
+    "homepage": "https://www.spotify.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.spotify.com/legal/end-user-agreement/"
+    },
+    "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-1.2.45.454.gc16ec9f6-122.exe",
+    "hash": "cc1c9f9c840cb69217689f36b9a7db4eb3d180b735cef15c5ea1efd27ef0e9bd",
+    "installer": {
+        "script": [
+            "Start-Process -Wait \"$dir\\$fname\" -Args '/extract', \"`\"$dir`\"\"",
+            "# Disable built-in updater",
+            "Remove-Item -ErrorAction Ignore -Recurse \"$env:LOCALAPPDATA\\Spotify\\Update\" | Out-Null",
+            "$updateFile = New-Item \"$env:LOCALAPPDATA\\Spotify\" -Name Update -ItemType File -Value \"Disabled by Scoop\" -Force",
+            "$updatefile.Attributes = 'ReadOnly', 'System'",
+            "Remove-Item \"$dir\\$fname\", \"$dir\\SpotifyMigrator.exe\" -ErrorAction SilentlyContinue"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Spotify.exe",
+            "Spotify"
+        ]
+    ],
+    "uninstaller": {
+        "script": [
+            "$updateFile = \"$env:LOCALAPPDATA\\Spotify\\update\"",
+            "Remove-Item $updateFile -Force -ErrorAction SilentlyContinue",
+            "if ($cmd -ne 'uninstall') { return }",
+            "Start-Process -Wait \"$dir\\Spotify.exe\" -Args '/Uninstall', '/Silent'"
+        ]
+    }
+}
