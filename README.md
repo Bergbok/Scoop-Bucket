@@ -1,5 +1,3 @@
-# Scoop Bucket Template
-
 [![Tests](https://github.com/Bergbok/Scoop-Bucket/actions/workflows/ci.yml/badge.svg)](https://github.com/Bergbok/Scoop-Bucket/actions/workflows/ci.yml) [![Excavator](https://github.com/Bergbok/Scoop-Bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/Bergbok/Scoop-Bucket/actions/workflows/excavator.yml)
 
 Bucket for [Scoop](https://scoop.sh), the best Windows command-line installer.
