@@ -1,5 +1,5 @@
 {
-    "version": "1.0.9235",
+    "version": "1.0.9236",
     "description": "Free Voice and Text Chat.",
     "homepage": "https://discordapp.com/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9235/DiscordSetup.exe#/dl.7z",
-            "hash": "0c7952aa2b24d6902803943451c16734a53b17007510e5c970793a0cb420edaa"
+            "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9236/DiscordSetup.exe#/dl.7z",
+            "hash": "242b40a7302d475e12b5be61deb3a88d9392eae84a241790542d73f59b79e85a"
         }
     },
     "extract_to": "_tmp",
